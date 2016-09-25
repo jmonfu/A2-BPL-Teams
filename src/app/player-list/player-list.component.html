@@ -3,7 +3,7 @@
 <hr>
 
 <div class="playerList">
-  <div class="playerList-player" *ngFor="let p of players">
+  <div class="playerList-player" *ngFor="let p of players" (click)="onSelect(p)">
     <!--here we use the [ngClass] directive to hide the image until it has been completely loaded-->
     <!--we listen for the load event of the <img> tag so we can toggle the imageLoaded property.-->
     <img [ngClass]="{'hidden': !p.imageLoaded}" class="playerList-player-sprite" (load)="p.imageLoaded = true" [attr.src]="p.thumb">
@@ -14,3 +14,5 @@
     </div>
   </div>
 </div>
+
+<player-details [player]="selectedPlayer"></player-details>

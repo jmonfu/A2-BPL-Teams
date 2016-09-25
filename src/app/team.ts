@@ -1,4 +1,4 @@
-export class Teams {
+export class Team {
     id: number;
     name: string;
 }

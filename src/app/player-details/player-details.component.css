@@ -1,0 +1,21 @@
+.playerDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playerDetails-player {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 2px;
+}
+
+.playerTitle{
+  text-align: center;
+  text-shadow: 1in;
+  font-weight: bold;    
+}

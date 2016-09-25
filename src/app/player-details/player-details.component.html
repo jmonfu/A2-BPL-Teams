@@ -1,3 +1,37 @@
-<p>
-  player-details works!
-</p>
+<div class="playerDetails">
+    <div *ngIf="player">
+      <div class="playerDetails-player">
+            <div class="playerTitle">{{player.name}} {{player.surname}}</div>
+            <table>
+            <tr>
+              <td colspan="2"><img [attr.src]="player.image"></td>
+            </tr>
+            <tr>
+              <td><label>ID: </label></td>
+              <td>{{player.id}}</td>
+            </tr>
+            <tr>
+              <td><label>Date Of Birth: </label></td>
+              <td><label>{{player.dob}} </label></td>
+            </tr>
+            <tr>
+              <td><label>Birth Place: </label></td>
+              <td><label>{{player.birthplace}} </label></td>
+            </tr>
+            <tr>
+              <td><label>Position: </label></td>
+              <td><label>{{player.position}} </label></td>
+            </tr>
+            <tr>
+              <td><label>Appearance: </label></td>
+              <td><label>{{player.appearances}} </label></td>
+            </tr>
+            <tr>
+              <td><label>Goals: </label></td>
+              <td><label>{{player.goals}} </label></td>
+            </tr>
+            </table>
+        </div>
+  </div>
+</div>
+
