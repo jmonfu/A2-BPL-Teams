@@ -1,0 +1,51 @@
+.playerList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playerList-player {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 2px;
+}
+
+.playerList-player-id {
+  text-align: center;
+  font-size: 24px;
+}
+
+.playerList-player-sprite {
+  /*width: 50px;
+  height: 50px;*/
+  transition: opacity 0.2s linear;
+  opacity: 1;
+}
+
+.playerList-player-sprite.hidden {
+  opacity: 0;
+}
+
+.playerList-player-name {
+  text-align: center;
+}
+
+.load-button {
+  display: block;
+  margin: 20px auto;
+  border: 0;
+  border-radius: 2px;
+  background-color: rgb(0, 0, 128);
+  color: rgb(255, 255, 255);
+  max-width: 200px;
+  padding: 10px 50px;
+  font-size: 20px;
+}
+
+.load-button[disabled] {
+  opacity: 0.6;
+}

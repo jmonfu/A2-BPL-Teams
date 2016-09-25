@@ -1,3 +1,16 @@
-<p>
-  player-list works!
-</p>
+<h2>  Manchester United </h2>
+
+<hr>
+
+<div class="playerList">
+  <div class="playerList-player" *ngFor="let p of players">
+    <!--here we use the [ngClass] directive to hide the image until it has been completely loaded-->
+    <!--we listen for the load event of the <img> tag so we can toggle the imageLoaded property.-->
+    <img [ngClass]="{'hidden': !p.imageLoaded}" class="playerList-player-sprite" (load)="p.imageLoaded = true" [attr.src]="p.thumb">
+    <div class="playerList-player-name">
+      <!--If you want to convert a string to uppercase you can use the uppercase pipe-->
+      {{ p.name | capitalize }}
+      {{ p.surname | capitalize }}
+    </div>
+  </div>
+</div>

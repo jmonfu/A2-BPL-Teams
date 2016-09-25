@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+
+import 'rxjs/add/operator/map';
 
   var _players = [
       {id:1, teamId:1, name:"David", surname:"De Gea", thumb:"../Images/DeGea_Thumb.jpg", image:"../Images/DeGea_Full.jpg", dob:"01/01/2000", birthplace:"Madrid",
@@ -21,7 +24,7 @@ import { Injectable } from '@angular/core';
 
 
 @Injectable()
-export class TeamsServiceService {
+export class TeamsService {
   private teams;
   private players;
 
@@ -37,6 +40,8 @@ export class TeamsServiceService {
   getPlayers(){
     return this.players;
   }
+
+  
 
 }
 
